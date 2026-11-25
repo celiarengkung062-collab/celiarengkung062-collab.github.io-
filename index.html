@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gwen Rengkung — Profil Pribadi | Manado</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Konfigurasi Palet Warna Silver & Brown -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        silver: {
+                            50: '#f8f9fa',
+                            100: '#f1f3f5',
+                            200: '#e2e5e9',
+                            300: '#cdd3da',
+                            400: '#adb5bd',
+                            500: '#868e96',
+                            600: '#6c757d',
+                            700: '#495057',
+                        },
+                        brown: {
+                            50: '#faf6f3',
+                            100: '#f2e8e0',
+                            200: '#e3d0c1',
+                            300: '#cfa98f',
+                            400: '#b08062',
+                            500: '#8c5e42',
+                            600: '#734a32',
+                            700: '#5c3a27',
+                            800: '#452b1d',
+                            900: '#2e1c13',
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body
+    class="bg-silver-100 text-brown-900 font-sans antialiased overflow-x-hidden selection:bg-brown-700 selection:text-silver-50">
+
+    <!-- Navigasi Utama -->
+    <header class="sticky top-0 z-40 bg-silver-50/90 backdrop-blur-md border-b border-silver-200/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo / Nama -->
+                <a href="#beranda" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 rounded-2xl bg-gradient-to-br from-brown-700 to-brown-900 text-silver-50 flex items-center justify-center font-semibold text-sm tracking-wide shadow-md shadow-brown-900/15 group-hover:scale-105 transition-transform">
+                        GR
+                    </div>
+                    <div class="leading-tight">
+                        <span class="block font-semibold text-brown-900 text-sm sm:text-base tracking-tight">Gwen
+                            Rengkung</span>
+                        <span class="block text-xs text-silver-600">Manado, Sulawesi Utara</span>
+                    </div>
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center gap-2">
+                    <a href="#beranda"
+                        class="px-4 py-2 rounded-xl text-sm font-medium text-brown-800 hover:bg-silver-200/70 transition-colors">Beranda</a>
+                    <a href="#tentang"
+                        class="px-4 py-2 rounded-xl text-sm font-medium text-brown-800 hover:bg-silver-200/70 transition-colors">Tentang
+                        Saya</a>
+                    <a href="#minat"
+                        class="px-4 py-2 rounded-xl text-sm font-medium text-brown-800 hover:bg-silver-200/70 transition-colors">Minat
+                        & Hobi</a>
+                    <a href="#kontak"
+                        class="ml-2 px-5 py-2.5 rounded-xl text-sm font-medium bg-brown-700 text-silver-50 hover:bg-brown-800 transition-colors shadow-sm">Kontak</a>
+                </nav>
+
+                <!-- Tombol Menu Mobile -->
+                <button id="mobile-menu-btn" type="button" aria-label="Buka menu navigasi" aria-expanded="false"
+                    class="md:hidden p-2.5 rounded-xl bg-silver-200/80 text-brown-800 hover:bg-silver-300/80 transition-colors">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dropdown Menu Mobile -->
+            <nav id="mobile-menu" class="hidden md:hidden pb-4 pt-2 border-t border-silver-200 space-y-1.5">
+                <a href="#beranda"
+                    class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-brown-900 hover:bg-silver-200/80">Beranda</a>
+                <a href="#tentang"
+                    class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-brown-900 hover:bg-silver-200/80">Tentang
+                    Saya</a>
+                <a href="#minat"
+                    class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium text-brown-900 hover:bg-silver-200/80">Minat
+                    & Hobi</a>
+                <a href="#kontak"
+                    class="mobile-nav-link block px-4 py-3 rounded-xl text-sm font-medium bg-brown-700 text-silver-50 text-center">Kontak
+                    & Bagikan</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bagian Hero -->
+        <section id="beranda"
+            class="relative overflow-hidden bg-gradient-to-b from-silver-200/80 via-silver-100 to-silver-100 pt-10 pb-16 sm:pt-16 sm:pb-24">
+            <!-- Dekorasi Latar Halus -->
+            <div
+                class="pointer-events-none absolute -top-24 -right-24 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-brown-300/20 blur-3xl">
+            </div>
+            <div
+                class="pointer-events-none absolute -bottom-24 -left-24 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-silver-400/25 blur-3xl">
+            </div>
+
+            <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+                    <!-- Kolom Foto Profil (Tampil di atas pada mobile, kanan pada desktop) -->
+                    <div class="lg:col-span-5 lg:order-2 flex flex-col items-center">
+                        <div class="relative w-full max-w-xs sm:max-w-sm">
+                            <!-- Bingkai Aksen Silver & Brown -->
+                            <div
+                                class="absolute -inset-2 rounded-[2rem] bg-gradient-to-tr from-brown-700 via-silver-300 to-brown-400 opacity-75 blur-[2px]">
+                            </div>
+                            <div
+                                class="relative bg-silver-50 p-2.5 rounded-[1.85rem] shadow-xl shadow-brown-900/15 border border-silver-200">
+                                <div class="relative overflow-hidden rounded-[1.35rem] aspect-[3/4] bg-silver-200">
+                                    <img id="hero-profile-img" src="image.png"
+                                        alt="Foto profil Gwen Rengkung dari Manado"
+                                        title="Klik untuk memilih foto dari galeri"
+                                        class="w-full h-full object-cover object-center cursor-pointer transition-transform duration-500 hover:scale-[1.02]"
+                                        onerror="this.onerror=null;this.src='https://placehold.co/600x800/e2e5e9/5c3a27?text=Klik+untuk+Muat+Foto+Gwen';" />
+                                    <!-- Lencana Nama di Sudut Bawah Foto -->
+                                    <div
+                                        class="absolute bottom-3 left-3 right-3 bg-brown-900/80 backdrop-blur-md text-silver-50 px-4 py-2.5 rounded-2xl border border-silver-300/25 flex items-center justify-between gap-2">
+                                        <div>
+                                            <p class="text-xs sm:text-sm font-semibold leading-tight">Gwen Rengkung</p>
+                                            <p class="text-[11px] text-silver-300">Manado, Indonesia</p>
+                                        </div>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-brown-300 shrink-0"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Input Tersembunyi & Tombol Muat Foto untuk Pratinjau Instan -->
+                        <input id="photo-upload-input" type="file" accept="image/*" class="hidden" />
+                        <button id="upload-photo-btn" type="button"
+                            class="mt-4 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-silver-50 hover:bg-silver-200 text-brown-800 border border-silver-300 text-xs sm:text-sm font-medium transition-colors shadow-sm">
+                            <svg class="w-4 h-4 text-brown-700 shrink-0" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span>Pilih / Muat Foto Profil</span>
+                        </button>
+                    </div>
+
+                    <!-- Kolom Teks Perkenalan -->
+                    <div class="lg:col-span-7 lg:order-1 text-center lg:text-left">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-silver-50 border border-silver-300 text-brown-700 text-xs sm:text-sm font-medium shadow-sm mb-5">
+                            <svg class="w-4 h-4 text-brown-600 shrink-0" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Asli dari Manado, Sulawesi Utara</span>
+                        </div>
+
+                        <h1
+                            class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brown-900 leading-tight">
+                            Halo, saya
+                            <span
+                                class="block mt-1 bg-gradient-to-r from-brown-800 via-brown-600 to-brown-500 bg-clip-text text-transparent">
+                                Gwen Rengkung
+                            </span>
+                        </h1>
+
+                        <p class="mt-5 text-base sm:text-lg text-silver-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Selamat datang di ruang profil pribadi saya. Tumbuh dan berasal dari kota pesisir yang
+                            hangat, <strong class="text-brown-800 font-semibold">Manado</strong>, saya senang membawa
+                            semangat keramahan, kreativitas, dan ketulusan dalam setiap langkah serta karya yang saya
+                            jalani.
+                        </p>
+
+                        <!-- Tombol Aksi Utama -->
+                        <div
+                            class="mt-7 sm:mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3">
+                            <a href="#kontak"
+                                class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-brown-700 text-silver-50 font-medium text-sm sm:text-base hover:bg-brown-800 active:scale-[0.99] transition-all shadow-md shadow-brown-900/15 text-center">
+                                Sapa & Terhubung
+                            </a>
+                            <a href="#tentang"
+                                class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-silver-50 text-brown-800 border border-silver-300 font-medium text-sm sm:text-base hover:bg-silver-200/80 transition-all text-center">
+                                Kenali Lebih Dekat
+                            </a>
+                            <button id="hero-copy-link-btn" type="button"
+                                class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-silver-200/90 text-brown-900 border border-silver-300 font-medium text-sm sm:text-base hover:bg-silver-300/80 active:scale-[0.99] transition-all">
+                                <svg class="w-4 h-4 text-brown-700 shrink-0" fill="none" stroke="currentColor"
+                                    stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                </svg>
+                                <span>Salin Tautan</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Tentang Saya -->
+        <section id="tentang" class="py-16 sm:py-20 bg-silver-50 border-y border-silver-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <!-- Foto Sekunder -->
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="w-full max-w-xs bg-silver-100 p-3 rounded-3xl border border-silver-300 shadow-md">
+                            <div class="overflow-hidden rounded-2xl aspect-square bg-silver-200">
+                                <img id="about-profile-img" src="image.png" alt="Potret Gwen Rengkung"
+                                    title="Klik untuk memilih foto dari galeri"
+                                    class="w-full h-full object-cover object-top cursor-pointer"
+                                    onerror="this.onerror=null;this.src='https://placehold.co/500x500/e2e5e9/5c3a27?text=Klik+untuk+Muat+Foto+Gwen';" />
+                            </div>
+                            <div class="mt-3 text-center">
+                                <p class="text-sm font-semibold text-brown-900">Gwen Rengkung</p>
+                                <p class="text-xs text-silver-600">Hangat • Elegan • Autentik</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cerita Singkat & Info Ringkas -->
+                    <div class="lg:col-span-8">
+                        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-brown-600 mb-2">
+                            Tentang Saya
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-brown-900 tracking-tight">
+                            Cerita Singkat di Balik Nama Gwen Rengkung
+                        </h2>
+                        <p class="mt-4 text-sm sm:text-base text-silver-700 leading-relaxed">
+                            Saya adalah pribadi yang menghargai kesederhanaan, ketenangan, dan hubungan baik dengan
+                            orang-orang di sekitar. Berasal dari <strong class="text-brown-800">Manado</strong>, saya
+                            percaya bahwa setiap pertemuan membawa cerita baru dan kesempatan untuk terus bertumbuh
+                            menjadi versi terbaik dari diri sendiri.
+                        </p>
+
+                        <!-- Grid Biodata Ringkas -->
+                        <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-2xl bg-silver-100 border border-silver-200">
+                                <span class="block text-xs uppercase tracking-wider text-silver-600 font-medium">Nama
+                                    Lengkap</span>
+                                <span class="mt-1 block text-base font-semibold text-brown-900">Gwen Rengkung</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-silver-100 border border-silver-200">
+                                <span class="block text-xs uppercase tracking-wider text-silver-600 font-medium">Asal
+                                    Daerah</span>
+                                <span class="mt-1 block text-base font-semibold text-brown-900">Manado, Sulawesi
+                                    Utara</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-brown-50 border border-brown-200/80">
+                                <span class="block text-xs uppercase tracking-wider text-brown-600 font-medium">Tanggal
+                                    Lahir</span>
+                                <span class="mt-1 block text-base font-semibold text-brown-900">07 May 2006</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-brown-50 border border-brown-200/80">
+                                <span
+                                    class="block text-xs uppercase tracking-wider text-brown-600 font-medium">MBTI</span>
+                                <span class="mt-1 block text-base font-semibold text-brown-900">INFJ</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-silver-100 border border-silver-200">
+                                <span
+                                    class="block text-xs uppercase tracking-wider text-silver-600 font-medium">Agama</span>
+                                <span class="mt-1 block text-base font-semibold text-brown-900">Kristen</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-silver-100 border border-silver-200">
+                                <span
+                                    class="block text-xs uppercase tracking-wider text-silver-600 font-medium">Status</span>
+                                <span class="mt-1 block text-base font-semibold text-brown-900">Mahasiswa</span>
+                            </div>
+                        </div>
+
+                        <!-- Riwayat Pendidikan -->
+                        <div class="mt-8">
+                            <h3 class="text-lg font-bold text-brown-900 tracking-tight mb-4">Riwayat Pendidikan</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="p-4 rounded-2xl bg-silver-100 border border-silver-200">
+                                    <span
+                                        class="block text-xs uppercase tracking-wider text-brown-600 font-semibold">2011
+                                        – 2017 • SD</span>
+                                    <span class="mt-1 block text-base font-semibold text-brown-900">SD Negeri
+                                        Winangun</span>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-silver-100 border border-silver-200">
+                                    <span
+                                        class="block text-xs uppercase tracking-wider text-brown-600 font-semibold">2017
+                                        – 2020 • SMP</span>
+                                    <span class="mt-1 block text-base font-semibold text-brown-900">SMP Frater Don Bosco
+                                        Manado</span>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-brown-50 border border-brown-200/80">
+                                    <span
+                                        class="block text-xs uppercase tracking-wider text-brown-600 font-semibold">2020
+                                        – 2023 • SMA</span>
+                                    <span class="mt-1 block text-base font-semibold text-brown-900">SMA Frater Don Bosco
+                                        Manado</span>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-brown-50 border border-brown-200/80">
+                                    <span
+                                        class="block text-xs uppercase tracking-wider text-brown-600 font-semibold">2023
+                                        – Sekarang • Kuliah</span>
+                                    <span class="mt-1 block text-base font-semibold text-brown-900">Universitas Klabat
+                                        dan Universitas Sam Ratulangi Manado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Minat & Hobi -->
+        <section id="minat" class="py-16 sm:py-20 bg-silver-50 border-y border-silver-200">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-brown-600">Minat & Hobi</span>
+                    <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-brown-900">Hal-Hal yang Saya Sukai</h2>
+                    <p class="mt-3 text-sm sm:text-base text-silver-700">
+                        Beberapa minat dan hobi keseharian yang memberi warna dan semangat dalam aktivitas saya.
+                    </p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Kartu 1 -->
+                    <article
+                        class="p-6 rounded-3xl bg-silver-100 border border-silver-200 hover:border-brown-300 hover:shadow-md transition-all">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-brown-700 text-silver-50 flex items-center justify-center mb-5 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-brown-900">Fotografi & Estetika</h3>
+                        <p class="mt-2 text-sm text-silver-700 leading-relaxed">
+                            Mengabadikan momen berkesan melalui lensa kamera serta menyukai komposisi visual yang
+                            lembut, rapi, dan estetis.
+                        </p>
+                    </article>
+
+                    <!-- Kartu 2 -->
+                    <article
+                        class="p-6 rounded-3xl bg-silver-100 border border-silver-200 hover:border-brown-300 hover:shadow-md transition-all">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-brown-700 text-silver-50 flex items-center justify-center mb-5 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-brown-900">Musik & Playlist</h3>
+                        <p class="mt-2 text-sm text-silver-700 leading-relaxed">
+                            Mendengarkan beragam alunan musik dan menyusun playlist personal yang menemani suasana hati
+                            di setiap waktu.
+                        </p>
+                    </article>
+
+                    <!-- Kartu 3 -->
+                    <article
+                        class="p-6 rounded-3xl bg-silver-100 border border-silver-200 hover:border-brown-300 hover:shadow-md transition-all">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-brown-700 text-silver-50 flex items-center justify-center mb-5 shadow-sm">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-brown-900">Jalan-Jalan & Alam</h3>
+                        <p class="mt-2 text-sm text-silver-700 leading-relaxed">
+                            Menikmati perjalanan santai, menghirup udara segar, dan mengeksplorasi keindahan alam untuk
+                            menyegarkan pikiran.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak & Bagikan Tautan -->
+        <section id="kontak" class="py-16 sm:py-20 bg-silver-100">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-silver-50 rounded-3xl p-6 sm:p-10 shadow-lg shadow-brown-900/5 border border-silver-200">
+                    <div class="text-center">
+                        <span class="text-xs font-semibold uppercase tracking-widest text-brown-600">Kontak &
+                            Tautan</span>
+                        <h2 class="mt-2 text-2xl sm:text-3xl font-bold text-brown-900">Kirim Pesan untuk Gwen</h2>
+                        <p class="mt-2 text-sm text-silver-700">
+                            Ingin menyapa atau berkolaborasi? Tinggalkan pesan di bawah ini.
+                        </p>
+                    </div>
+
+                    <!-- Formulir Pesan Interaktif -->
+                    <form id="contact-form" class="mt-7 space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="sender-name" class="block text-xs font-medium text-brown-800 mb-1.5">Nama
+                                    Anda</label>
+                                <input id="sender-name" type="text" required placeholder="Contoh: Nadia"
+                                    class="w-full px-4 py-3 rounded-xl bg-silver-100 border border-silver-300 text-sm text-brown-900 placeholder:text-silver-500 focus:outline-none focus:ring-2 focus:ring-brown-600" />
+                            </div>
+                            <div>
+                                <label for="sender-email"
+                                    class="block text-xs font-medium text-brown-800 mb-1.5">Email</label>
+                                <input id="sender-email" type="email" required placeholder="nama@email.com"
+                                    class="w-full px-4 py-3 rounded-xl bg-silver-100 border border-silver-300 text-sm text-brown-900 placeholder:text-silver-500 focus:outline-none focus:ring-2 focus:ring-brown-600" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="sender-message"
+                                class="block text-xs font-medium text-brown-800 mb-1.5">Pesan</label>
+                            <textarea id="sender-message" rows="4" required
+                                placeholder="Tulis sapaan atau pesan Anda untuk Gwen..."
+                                class="w-full px-4 py-3 rounded-xl bg-silver-100 border border-silver-300 text-sm text-brown-900 placeholder:text-silver-500 focus:outline-none focus:ring-2 focus:ring-brown-600 resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full py-3.5 rounded-2xl bg-brown-700 hover:bg-brown-800 text-silver-50 font-medium text-sm sm:text-base transition-colors shadow-md shadow-brown-900/15">
+                            Kirim Pesan
+                        </button>
+                        <div id="form-feedback"
+                            class="hidden p-3.5 rounded-xl text-xs sm:text-sm font-medium text-center"></div>
+                    </form>
+
+                    <!-- Bagikan & Salin Tautan Profil -->
+                    <div class="mt-8 pt-7 border-t border-silver-200 space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-xs sm:text-sm font-semibold text-brown-900">Tautan Website
+                                    Profil</span>
+                                <span id="link-status-badge"
+                                    class="text-[11px] font-medium px-2.5 py-0.5 rounded-full bg-silver-200 text-brown-800">
+                                    Siap Dibagikan
+                                </span>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-2">
+                                <input id="profile-link-input" type="text" readonly
+                                    aria-label="Tautan profil Gwen Rengkung"
+                                    class="w-full px-3.5 py-2.5 rounded-xl bg-silver-100 border border-silver-300 text-xs sm:text-sm text-brown-900 font-mono focus:outline-none focus:ring-2 focus:ring-brown-500" />
+                                <button id="copy-link-btn" type="button"
+                                    class="shrink-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brown-700 hover:bg-brown-800 text-silver-50 text-xs sm:text-sm font-medium transition-colors shadow-sm">
+                                    <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>Salin Tautan</span>
+                                </button>
+                            </div>
+                            <p id="link-hosting-note" class="mt-2 text-xs text-silver-600 leading-relaxed hidden">
+                                Saat ini website sedang berada di mode pratinjau/lokal. Unduh file <strong
+                                    class="text-brown-800">index.html</strong> di bawah lalu unggah ke layanan gratis
+                                seperti <em>Netlify Drop</em> atau <em>GitHub Pages</em> agar tautan dapat dibuka oleh
+                                siapa saja.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+                            <button id="share-profile-btn" type="button"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-silver-200 hover:bg-silver-300 text-brown-900 text-xs sm:text-sm font-medium transition-colors">
+                                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                </svg>
+                                <span>Bagikan Profil</span>
+                            </button>
+
+                            <button id="download-html-btn" type="button"
+                                class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brown-100 hover:bg-brown-200 text-brown-900 border border-brown-200 text-xs sm:text-sm font-medium transition-colors">
+                                <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                <span>Unduh index.html</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brown-900 text-silver-300 py-8 border-t border-brown-800">
+        <div
+            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+            <p class="text-xs sm:text-sm">
+                &copy; <span id="current-year">2026</span> <strong class="text-silver-50 font-semibold">Gwen
+                    Rengkung</strong>. Dibuat dengan hangat dari Manado.
+            </p>
+            <a href="#beranda" class="text-xs sm:text-sm text-silver-300 hover:text-silver-50 transition-colors">
+                Kembali ke Atas &uarr;
+            </a>
+        </div>
+    </footer>
+
+    <!-- Notifikasi Toast Mengambang -->
+    <div id="toast-notification" role="status" aria-live="polite"
+        class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden max-w-[90vw] sm:max-w-md px-5 py-3 rounded-2xl bg-brown-900 text-silver-50 text-xs sm:text-sm font-medium shadow-xl border border-silver-400/30 text-center">
+    </div>
+
+    <!-- Logika Interaktif Website -->
+    <script>
+        // Tahun dinamis di footer
+        const yearEl = document.getElementById('current-year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // Sistem Notifikasi Toast
+        const toastEl = document.getElementById('toast-notification');
+        let toastTimer = null;
+
+        function showToast(message) {
+            if (!toastEl) return;
+            toastEl.textContent = message;
+            toastEl.classList.remove('hidden');
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toastEl.classList.add('hidden');
+            }, 3200);
+        }
+
+        // Menu Navigasi Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen = document.getElementById('menu-icon-open');
+        const iconClose = document.getElementById('menu-icon-close');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+                if (iconOpen && iconClose) {
+                    iconOpen.classList.toggle('hidden', !isHidden);
+                    iconClose.classList.toggle('hidden', isHidden);
+                }
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    if (iconOpen && iconClose) {
+                        iconOpen.classList.remove('hidden');
+                        iconClose.classList.add('hidden');
+                    }
+                });
+            });
+        }
+
+        // Fitur Muat Foto Profil dari Perangkat (berguna saat pratinjau langsung di browser)
+        const uploadPhotoBtn = document.getElementById('upload-photo-btn');
+        const photoUploadInput = document.getElementById('photo-upload-input');
+        const heroImg = document.getElementById('hero-profile-img');
+        const aboutImg = document.getElementById('about-profile-img');
+
+        if (uploadPhotoBtn && photoUploadInput) {
+            uploadPhotoBtn.addEventListener('click', () => photoUploadInput.click());
+            if (heroImg) heroImg.addEventListener('click', () => photoUploadInput.click());
+            if (aboutImg) aboutImg.addEventListener('click', () => photoUploadInput.click());
+        // ... existing code ... -->
